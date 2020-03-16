@@ -1,0 +1,352 @@
+/* FONTS IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+
+/*Start global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #eee;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: url(images/sitebg.jpg) no-repeat center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+p{
+    font-size: 1.8rem;
+    font-weight: 300;
+
+}
+
+img{
+    width: 100%;
+}
+
+
+/*Start header*/
+header{
+    width: 100%;
+    height: 100vh;
+}
+.top-nav{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: -100vh ;
+    background-color: #16162d;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+    z-index: 120;
+}
+
+.nav-list{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+li{
+    margin: 0 2rem;
+}
+
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    background: linear-gradient(to top, #ffe838, #fd57ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-nav.open{
+    top: 0;
+    border-radius: initial;
+
+}
+.menu-toggler{
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+.menu-toggler.open{
+    transform: rotate(-45deg);
+}
+
+.bar{
+    background: linear-gradient(to right, #ffe838, #fd5b7f);
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+    z-index: 150;
+}
+
+.bar.half{
+    width: 50%;
+
+}
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start{
+    transform: rotate(-450deg) translateX(.8rem);
+}
+
+.bar.end{
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end{
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+
+/*presentation*/
+.presentation{
+    position: relative;
+    margin-top: -35%;
+    margin-left: 10%;
+    font-size: 28px;
+    z-index: 10;
+}
+
+.info{
+    color: grey;
+    margin-left: 10%;
+}
+
+.b a{
+    position: relative;
+    margin-left: 10%;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fd57ef;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    border: solid 2px;
+    border-radius: 4px;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  .b a:hover{
+    color: #fc14e9;
+    background: #fd57ef;
+    box-shadow: 0 0 10px #fd57ef, 0 0 40px #fd57ef, 0 0 80px #fd57ef;
+    transition-delay: 1s;
+  }
+  .b a span{
+    position: absolute;
+    display: block;
+  }
+  .b a span:nth-child(1)  {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg,transparent,#fd57ef);
+  }
+  .b a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+  .b a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg,transparent,#fd57ef);
+  }
+  .b a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+  .b a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#fd57ef);
+  }
+  .b a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+  .b a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#fd57ef);
+  }
+  .b a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+
+  /* ABOUT */
+  .about{
+      height: 100vh;
+      margin-top: 50px;
+  }
+
+  .titleAbout h1{
+      font-size: 10rem;
+      z-index: 0;
+      margin-top: 20%;
+      margin-left: 50%;
+      opacity: .4;
+  }
+
+  .about-me-info p{
+      width: 30%;
+      text-align: justify;
+      margin-left: 50%;
+      opacity: .4;
+  }
+  .img{
+      width: 35%;
+      margin-top: -18%;
+      margin-left: 15%;
+
+      
+  }
+
+  ::-webkit-scrollbar{
+      background: #16162d;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #000;
+}
+
+/* SKILLS */
+.titleSkills h1{
+    font-size: 10rem;
+    z-index: 0;
+    margin-top: 20%;
+    text-align: center;
+    opacity: .4;
+}
+
+.my-skills{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    text-align: center;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skills h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2rem 0;
+}
+
+.icon-container{
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #ffe838;
+    background-color: #fd57bf;
+    margin-bottom: 4rem;
+    display: flex;
+    transform: rotate(45deg);
+}
+
+.icon-container i{
+    color: #ffe838;
+    font-size: 5rem;
+    margin: auto;
+    transform: rotate(-45deg);
+}
+
+/*PORTIFOLIO*/
+.titlePortifolio{
+    font-size: 5rem;
+    z-index: 0;
+    margin-top: 20%;
+    text-align: center;
+    opacity: .4;
+}
+
+.portifolio-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.portifolio-item:last-child{
+    margin-bottom: 0;
+}
+.portifolio-img{
+    width: 200%;
+}
+
+.portifolio-description{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.portifolio-description h1{
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+
+.portifolio-description h6{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.3;
+}
+
+
