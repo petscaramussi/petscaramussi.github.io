@@ -241,7 +241,6 @@ li{
       width: 30%;
       text-align: justify;
       margin-left: 50%;
-      opacity: .4;
   }
   .img{
       width: 35%;
@@ -275,6 +274,8 @@ li{
     text-align: center;
 }
 
+
+
 .skill{
     display: flex;
     flex-direction: column;
@@ -292,7 +293,7 @@ li{
 .icon-container{
     width: 10rem;
     height: 10rem;
-    border: 3px solid #ffe838;
+    border: 3px solid #16162d;
     background-color: #fd57bf;
     margin-bottom: 4rem;
     display: flex;
@@ -300,7 +301,7 @@ li{
 }
 
 .icon-container i{
-    color: #ffe838;
+    color: #16162d;
     font-size: 5rem;
     margin: auto;
     transform: rotate(-45deg);
