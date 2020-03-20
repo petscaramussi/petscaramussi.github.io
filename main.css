@@ -411,6 +411,7 @@ li{
     color: #fff;
 }
 
+
 @media screen and (max-width:800px){
     /*body*/
     body{
@@ -490,4 +491,5 @@ li{
         max-width: 300px;
         margin: 10px 0;
     }
+  
 }
